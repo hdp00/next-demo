@@ -1,0 +1,68 @@
+export const lessons = [
+  {
+    number: "01",
+    href: "/learn/routing",
+    title: "文件路由与 Link",
+    summary: "用 app 目录和 Link 组件建立可分享的页面地址。",
+    file: "app/learn/routing/page.tsx",
+    tag: "基础",
+  },
+  {
+    number: "02",
+    href: "/learn/server-client",
+    title: "Server / Client",
+    summary: "让服务器负责数据，让客户端只负责需要交互的那一小块。",
+    file: "app/learn/server-client/page.tsx",
+    tag: "核心",
+  },
+  {
+    number: "03",
+    href: "/learn/data",
+    title: "服务端取数与 loading",
+    summary: "在 Server Component 中等待数据，并用 loading.tsx 做流式反馈。",
+    file: "app/learn/data/page.tsx",
+    tag: "数据",
+  },
+  {
+    number: "04",
+    href: "/learn/pagination",
+    title: "searchParams 与分页",
+    summary: "把查询条件放进 URL，用服务器组件渲染分页列表。",
+    file: "app/learn/pagination/page.tsx",
+    tag: "列表",
+  },
+  {
+    number: "05",
+    href: "/learn/dynamic/hello",
+    title: "动态路由与 metadata",
+    summary: "读取 [slug] 参数，为动态页面生成标题，并处理 notFound。",
+    file: "app/learn/dynamic/[slug]/page.tsx",
+    tag: "路由",
+  },
+  {
+    number: "06",
+    href: "/learn/errors",
+    title: "error.tsx 与 retry",
+    summary: "让一个路由段拥有自己的错误边界和重试入口。",
+    file: "app/learn/errors/error.tsx",
+    tag: "容错",
+  },
+  {
+    number: "07",
+    href: "/learn/api",
+    title: "Route Handler",
+    summary: "用 app/api/*/route.ts 写一个返回 JSON 的后端接口。",
+    file: "app/api/hello/route.ts",
+    tag: "后端",
+  },
+  {
+    number: "08",
+    href: "/learn/actions",
+    title: "Server Action",
+    summary: "用 form action 把一个提交动作直接交给服务器函数处理。",
+    file: "app/learn/actions/actions.ts",
+    tag: "写入",
+  },
+] as const;
+
+export type Lesson = (typeof lessons)[number];
